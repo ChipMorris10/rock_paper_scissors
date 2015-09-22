@@ -1,13 +1,14 @@
-// sample angular code
-
 var app = angular.module('myApp', []);
 
 app.controller('myController', function($scope) {
 
+
+  // setting the initial values
   // $scope.playerMove = "";
   $scope.playerScore = 0;
   $scope.computerScore = 0;
   $scope.ties = 0;
+
 
   $scope.playGame = function () {
 
@@ -26,10 +27,5 @@ app.controller('myController', function($scope) {
       $scope.winner = "Tie";
       $scope.ties += 1;
     }
-
-
-
-
-  }
-
+  };
 });

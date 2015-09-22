@@ -1,16 +1,14 @@
 // add scripts
-
 $(document).on('ready', function() {
   console.log('sanity check!');
 });
 
 
-
 //computer moves logic
 function computerMove () {
-  ///get a random option
+  //get a random option
   //get random index
-  var options = ["rock", "paper", "scissors"];
+  var options = ["Rock", "Paper", "Scissors"];
   var compMove = [];
   var randomIndex = Math.floor(Math.random()*(2 - 0 + 1) *1);
 
@@ -28,27 +26,25 @@ function computerMove () {
 
 
 //win logic
-
 //if rock vs. scissors, rock wins
 //if rock vs. paper, paper wins
 //if scissors vs. paper, scissors wins
 function winLogic (move1, move2) {
-  if ( move1 === "rock" && move2 === "scissors") {
-    return ("rock");
-  } else if ( move2 === "rock" && move1 === "scissors") {
-    return ("rock");
-  } else if (move1 === "rock" && move2 === "paper") {
-    return ("paper");
-  } else if (move2 === "rock" && move1 === "paper") {
-    return ("paper");
-  } else if (move1 === "scissors" && move2 === "paper") {
-    return ("scissors");
-  } else if (move2 === "scissors" && move1 === "paper") {
-    return ("scissors");
+  if ( move1 === "Rock" && move2 === "Scissors") {
+    return ("Rock");
+  } else if ( move2 === "Rock" && move1 === "Scissors") {
+    return ("Rock");
+  } else if (move1 === "Rock" && move2 === "Paper") {
+    return ("Paper");
+  } else if (move2 === "Rock" && move1 === "Paper") {
+    return ("Paper");
+  } else if (move1 === "Scissors" && move2 === "Paper") {
+    return ("Scissors");
+  } else if (move2 === "Scissors" && move1 === "Paper") {
+    return ("Scissors");
   } else {
     return ("tie");
   }
-
 }
 
 //update score function
